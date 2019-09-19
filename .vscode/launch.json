@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Run",
+            "request": "launch",
+            "mainClass": "app.App",
+            "projectName": "MgJavaSample"
+        }
+    ]
+}

@@ -8,6 +8,7 @@ __Note: This sample is constructed with plain Java without any framework.__
 This project uses the following library:
 - Google GSON (https://github.com/google/gson)
 - Apache HTTP Component (https://hc.apache.org/index.html) - contain 11 <code>.jar</code> library files
+- Apache Common Lang (https://commons.apache.org/proper/commons-lang/)
 
 ## Running sample in VSC
 

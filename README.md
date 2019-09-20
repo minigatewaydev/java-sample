@@ -14,7 +14,7 @@ This project uses the following library:
 - Download as ZIP and extract
 - In VSC, File > Open Folder
 
-Before running the sample, please manually restore all dependecies by going to <code>.classpath</code> file. Change all entries under <code>classpathentry</code> and point it into the actual local __.jar__ file. If you don't have it, please download it using the link provided on __Project dependency__ above.
+Before running the sample, please manually restore all dependencies by going to <code>.classpath</code> file. Change all entries under <code>classpathentry</code> and point it into the actual local __.jar__ file. If you don't have it, please download it using the link provided on __Project dependency__ above.
 
 After all restored:
 

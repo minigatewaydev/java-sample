@@ -19,4 +19,4 @@ Before running the sample, please manually restore all dependecies by going to <
 After all restored:
 
 - Change the required information in <code>App.java</code> file
-- Click on "Run" or "Debug" on top of <code>main</code> method
+- Click on "Run" or "Debug" link on top of <code>main</code> method

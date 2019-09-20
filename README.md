@@ -7,7 +7,7 @@ __Note: This sample is constructed with plain Java without any framework.__
 ## Project dependency
 This project uses the following library:
 - Google GSON (https://github.com/google/gson)
-- Apache HTTP Component (https://hc.apache.org/index.html)
+- Apache HTTP Component (https://hc.apache.org/index.html) - contain 11 <code>.jar</code> library files
 
 ## Running sample in VSC
 

@@ -15,4 +15,5 @@
 	<classpathentry kind="lib" path="C:/javalib/apache-httpcomponent/httpmime-4.5.9.jar"/>
 	<classpathentry kind="lib" path="C:/javalib/apache-httpcomponent/jna-4.5.2.jar"/>
 	<classpathentry kind="lib" path="C:/javalib/apache-httpcomponent/jna-platform-4.5.2.jar"/>
+	<classpathentry kind="lib" path="C:/javalib/commons-lang3-3.9.jar" />
 </classpath>

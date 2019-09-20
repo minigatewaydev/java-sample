@@ -1,8 +1,12 @@
 package app;
 
 import com.google.gson.Gson;
+
+import org.apache.commons.lang3.time.StopWatch;
+
 import java.io.IOException;
 import java.net.URLEncoder;
+
 import core.RestApiSender;
 import models.*;
 
@@ -19,8 +23,8 @@ public class App {
         System.out.println("===============================");
 
         /*
-         * TODO: change according to your own data for username & password.
-         * If you set 'dlrMask' to 1, please specify the 'dlrUrl'
+         * TODO: change according to your own data for username & password. If you set
+         * 'dlrMask' to 1, please specify the 'dlrUrl'
          */
         MtRequest request = new MtRequest();
         request.username = "YOUR_USERNAME";
@@ -53,8 +57,11 @@ public class App {
 
         System.out.println("Executing POST request..");
 
+        StopWatch sw = StopWatch.createStarted();
+
         var jsonReqString = new Gson().toJson(request, MtRequest.class);
         var response = api.sendPostRequest(baseUrl, jsonReqString);
+        sw.stop();
 
         if ("json".equals(request.responseType.toLowerCase())) {
 
@@ -62,7 +69,7 @@ public class App {
             var obj = new Gson().fromJson(response.responseContentString, MtResponse.class);
         }
 
-        System.out.println("Finished.");
+        System.out.println("Finished. Time taken: " + sw.getTime());
         System.out.println(
                 "Response = StatusCode: " + response.statusCode + ", Content: " + response.responseContentString);
     }
@@ -70,6 +77,7 @@ public class App {
     private static void sendSmsUsingGet(MtRequest request) throws IOException {
 
         System.out.println("Executing GET request..");
+        StopWatch sw = StopWatch.createStarted();
 
         var url = baseUrl + "?" + MtRequest.GW_USERNAME + "=" + request.username + "&" + MtRequest.GW_PASSWORD + "="
                 + request.password + "&" + MtRequest.GW_FROM + "=" + URLEncoder.encode(request.from, "UTF-8") + "&"
@@ -78,8 +86,8 @@ public class App {
                 + MtRequest.GW_DLR_MASK + "=" + request.dlrMask + "&" + MtRequest.GW_DLR_URL + "=" + request.dlrUrl
                 + "&" + MtRequest.GW_RESP_TYPE + "=" + request.responseType;
 
-
         var response = api.sendGetRequest(url);
+        sw.stop();
 
         if ("json".equals(request.responseType.toLowerCase())) {
 
@@ -87,7 +95,7 @@ public class App {
             var obj = new Gson().fromJson(response.responseContentString, MtResponse.class);
         }
 
-        System.out.println("Finished.");
+        System.out.println("Finished. Time taken: " + sw.getTime());
         System.out.println(
                 "Response = StatusCode: " + response.statusCode + ", Content: " + response.responseContentString);
     }
